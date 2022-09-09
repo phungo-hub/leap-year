@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lear Yeap</title>
+</head>
+<body>
+  <script>
+    let year = parseInt(prompt("Please enter a year"));
+    let isLeapYear = false
+
+    let isDivisbleBy4 = year % 4 === 0
+    if (isDivisbleBy4) {
+        let isDivisibleBy100 = year % 100 === 0
+        if (isDivisibleBy100) {
+            let isDivisibleBy400 = year % 400 === 0
+            if (isDivisibleBy400) {
+                isLeapYear = true
+            } else {
+                isLeapYear = false
+            }
+        } else {
+            isLeapYear = true
+        }
+    } else {
+        isLeapYear = false
+    }
+
+    if (isLeapYear) {
+        alert("Leap year")
+    } else {
+        alert("Not a leap year")
+    }
+  </script>
+</body>
+</html>
